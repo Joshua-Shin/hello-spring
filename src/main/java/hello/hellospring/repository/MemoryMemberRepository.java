@@ -7,9 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
     public static Map<Long, Member> store = new HashMap<>();
     public static long sequence = 0L;
+
     @Override
     public Member save(Member member) {
         member.setId(++sequence);
@@ -32,5 +33,9 @@ public class MemoryMemberRepository implements MemberRepository{
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
+    }
+
+    public void clearStore() {
+        store.clear();
     }
 }
