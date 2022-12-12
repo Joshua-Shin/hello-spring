@@ -18,10 +18,6 @@ public class MemberService {
         memberRepository.save(member);
         return member.getId();
         // 커밋 테스트
-        // 커밋 테스트 2
-        // 커밋 테스트 3
-        // 커밋 테스트 4
-        // 커밋 테스트 5
     }
 
     private void validateDuplicateName(Member member) {
