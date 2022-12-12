@@ -21,6 +21,7 @@ public class MemberService {
         // 커밋 테스트 2
         // 커밋 테스트 3
         // 커밋 테스트 4
+        // 커밋 테스트 5
     }
 
     private void validateDuplicateName(Member member) {
