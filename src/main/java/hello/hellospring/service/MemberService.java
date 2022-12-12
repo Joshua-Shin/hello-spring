@@ -17,7 +17,7 @@ public class MemberService {
         validateDuplicateName(member);
         memberRepository.save(member);
         return member.getId();
-        // 커밋 테스트 22
+        // 커밋 테스트 2233
     }
 
     private void validateDuplicateName(Member member) {
