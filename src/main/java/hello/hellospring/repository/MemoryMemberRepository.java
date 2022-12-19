@@ -6,12 +6,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import org.springframework.stereotype.Repository;
+
 
 public class MemoryMemberRepository implements MemberRepository {
     public static Map<Long, Member> store = new HashMap<>();
     public static long sequence = 0L;
 
-    @Override
+
     public Member save(Member member) {
         member.setId(++sequence);
         store.put(member.getId(), member);
